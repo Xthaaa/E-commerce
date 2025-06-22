@@ -9,16 +9,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Color(0xffF8F8F8),
-      body: Center(
-        child: SizedBox(
-          width: 376,
+      body: SafeArea(
+        child: Align(
+          alignment: Alignment.topCenter,
           child: SingleChildScrollView(
-            // <-- Added this
-            child: Column(
-              children: [
-                Components3(),
-                SizedBox(height: 10), // spacing before bottom bar if needed
-              ],
+            child: SizedBox(
+              width: 376,
+              child: Components3(),
             ),
           ),
         ),
